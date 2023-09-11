@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with Phone</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+<style>
+    .container{
+        background-color: #ffffff9b;
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+    .heading2{
+        color: rgba(10, 10, 0, 0.718);
+        margin-top: -18px;
+    }
+    .btn1{
+        margin-top: 60px;
+        background-color: rgba(17, 18, 18, 0.221);
+        padding: 10px;
+        border-radius: 10px solid white;
+        border-radius: 10px;
+    }
+    .btn2{
+        background-color:   rgba(17, 18, 18, 0.035);
+        border:  rgba(17, 18, 18, 0.221);
+        margin-left: 20px;
+    }
+    .btn2:hover{
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .btn3{
+        background-color:  rgba(17, 18, 18, 0.035);
+        border:  rgba(17, 18, 18, 0.221);
+        margin-left: 30px;
+    }
+    .btn3:hover{
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .email1{
+        margin-top: 70px;
+        background-color: #fff;
+        border-radius: white;
+        border: white;
+    }
+    .Password1{
+        margin-top: 20px;
+    }
+    #forget>a{
+        color: rgba(255, 166, 0, 0.848);
+        text-decoration: none;
+        float: right;
+    }
+    .btn4{
+        margin-top: 40px;
+        background-color: orange;
+        padding: 10px;
+        border-radius: 15px;
+    }
+    #btn{
+        margin-left: 95px;
+        background-color: orange;
+        border: orange;
+        color: #fff;
+    }
+    .btn5{
+       margin-top: 10px;
+        background-color: rgba(0, 0, 0, 0.057);
+        
+        border-radius: 15px;
+    }
+    #btn1{
+        margin-left: 130px;
+        background-color:  rgba(0, 0, 0, 0);
+        border:  rgba(0, 0, 0, 0.057);
+        color: black;
+    }
+    .or{
+        margin-top: 10px;
+    }
+    #btn1>img{
+        float: left;
+        margin-left: -80px;
+        opacity: 1;
+        height: 20px;
+        margin-top: 20px;
+    }
+    .lasth1{
+        color: rgba(0, 0, 0, 0.676);
+        text-decoration: none;
+    }
+    .lasth2{
+        color: orange;
+    }
+    /* .phone1{
+        border: white;
+        border-radius: white;
+    } */
+    .hr1{
+        margin-top: 10px;
+    }
+    .button1 {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.button1:hover {
+  opacity:1;
+}
+input[type=tel]{
+  /* width: 100%; */
+  /* padding: 15px;
+  margin: 5px 0 22px 0; */
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=tel]:focus{
+  background-color: #ddd;
+  outline: none;
+  color: black;
+}
+    
+</style>
+<body>
+    <div class="container">
+        <div class="heading1">
+            <h2>Login Accoount</h2>
+        </div>
+        <div class="heading2">
+            <h5>Hello,welcome back to our account</h5>
+        </div>
+        <div class="btn1">
+            <button class="btn2">Phone Number</button>
+            <button class="btn3">Email</button>
+        </div>
+        <div class="container">
+            <form id="login" onsubmit="process(event)">
+             
+              <input id="phone" class="Phone1 button1" type="tel" name="phone" placeholder="Phone Number"/>
+              
+              </div>
+              
+            </form>
+           </div>
+           
+
+        <div class="btn4">
+            <button id="btn" onclick="">Request OTP</button>
+        </div>
+        <div class="or">
+        ______________<strong class="or1">  OR  </strong>   ______________
+        </div>
+         <div class="btn5">
+            <button id="btn1" onclick=""><img src="./assest/image/google.png" alt=""><h6>Login with Google</h6></button>
+        </div> 
+        <a class="lasth1" href="">Not Registered yet ?<a class="lasth2">Create an account</a>
+    </div>
+</body>
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  </script>
+</html>
